@@ -1,1 +1,4 @@
 
+Answer = 1 => 
+
+Answer = 2 =>  To ensure that each product in the "Product" table has a valid category assigned to it ,  is by setting up a foreign key constraint between the "Product" table and the "Category" table. This constraint would enforce referential integrity, in this any of the value in the "category_id" column of the "Product" table must exist in the "id" column of the "Category" table. This ensures that only valid categories can be assigned to products.
