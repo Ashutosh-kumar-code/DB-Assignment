@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //  Product_Category Schema
 const productCategorySchema = new mongoose.Schema({
   name: { type: String, required: true },
-  description: { type: String },
+  desc: { type: String },
   created_at: { type: Date, default: Date.now },
   modified_at: { type: Date, default: Date.now },
   deleted_at: { type: Date },
