@@ -7,7 +7,7 @@ const productCategorySchema = new mongoose.Schema({
   desc: { type: String },
   created_at: { type: Date, default: Date.now },
   modified_at: { type: Date, default: Date.now },
-  deleted_at: { type: Date },
+  deleted_at: { type: Date, default: null },
 });
 
   // Product_Inventory Schema
@@ -42,7 +42,7 @@ const productSchema = new mongoose.Schema({
   discount_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Discount', required: true },
   created_at: { type: Date, default: Date.now },
   modified_at: { type: Date, default: Date.now },
-  deleted_at: { type: Date },
+  deleted_at: { type: Date, default: null },
 });
 
 
