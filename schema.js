@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-// Define Product_Category Schema
+//  Product_Category Schema
 const productCategorySchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String },
@@ -10,7 +10,7 @@ const productCategorySchema = new mongoose.Schema({
   deleted_at: { type: Date },
 });
 
-  // Create Mongoose schema for Product_Inventory
+  // Product_Inventory Schema
 const productInventorySchema = new mongoose.Schema({
     quantity: { type: Number, required: true },
     created_at: { type: Date, default: Date.now },
@@ -20,7 +20,7 @@ const productInventorySchema = new mongoose.Schema({
 });
 
 
-// Create Mongoose schema for Discount
+// Discount Schema
 const discountSchema = new mongoose.Schema({
     name: { type: String, required: true },
     desc: { type: String },
@@ -31,7 +31,7 @@ const discountSchema = new mongoose.Schema({
     deleted_at: { type: Date, default: null }
 });
 
-// Define Product Schema
+// Product Schema
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   desc: { type: String, required: true },
@@ -46,18 +46,17 @@ const productSchema = new mongoose.Schema({
 });
 
 
-// Create Mongoose models based on the schemas
-// const ProductInventory = mongoose.model('ProductInventory', productInventorySchema);
+// Discount model
 const Discount = mongoose.model('Discount', discountSchema);
 
-// Create Product_Category model
+// Product Category model
 const Product_Category = mongoose.model('Product_Category', productCategorySchema);
 
-// Create Product_Category model
+//  Product Inventory model
 const Product_Inventory = mongoose.model('Product_Inventory', productInventorySchema);
 
-// Create Product model
+//  Product model
 const Product = mongoose.model('Product', productSchema);
 
-// Export the models for use in your application
+// Export models
 module.exports = { Product,  Product_Inventory, Product_Category, Discount };
